@@ -1,11 +1,11 @@
-<?php namespace ToughDeveloper\ImageResizer;
+<?php namespace Eeesbk\ImgResizer;
 
 use System\Classes\PluginBase;
 use ToughDeveloper\ImageResizer\Classes\Image;
 use Validator;
 
 /**
- * ImageResizer Plugin Information File
+ * ImgResizer Plugin Information File
  */
 class Plugin extends PluginBase
 {
@@ -17,11 +17,11 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'toughdeveloper.imageresizer::lang.plugin.name',
-            'description' => 'toughdeveloper.imageresizer::lang.plugin.description',
-            'author'      => 'Tough Developer',
+            'name'        => 'eeesbk.img_resizer::lang.plugin.name',
+            'description' => 'eeesbk.img_resizer::lang.plugin.description',
+            'author'      => 'Eeesbk',
             'icon'        => 'icon-picture-o',
-            'homepage'    => 'https://github.com/toughdeveloper/oc-imageresizer-plugin'
+            'homepage'    => 'https://github.com/eeesbk/oc-img_resizer-plugin'
         ];
     }
 
@@ -33,9 +33,9 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'toughdeveloper.imageresizer.access_settings' => [
-                'tab'   => 'toughdeveloper.imageresizer::lang.permission.tab',
-                'label' => 'toughdeveloper.imageresizer::lang.permission.label'
+            'eeesbk.img_resizer.access_settings' => [
+                'tab'   => 'eeesbk.img_resizer::lang.permission.tab',
+                'label' => 'eeesbk.img_resizer::lang.permission.label'
             ]
         ];
     }
@@ -81,12 +81,12 @@ class Plugin extends PluginBase
     {
         return [
             'settings' => [
-                'label'       => 'toughdeveloper.imageresizer::lang.settings.label',
+                'label'       => 'eeesbk.img_resizer::lang.settings.label',
                 'icon'        => 'icon-picture-o',
-                'description' => 'toughdeveloper.imageresizer::lang.settings.description',
-                'class'       => 'ToughDeveloper\ImageResizer\Models\Settings',
+                'description' => 'eeesbk.img_resizer::lang.settings.description',
+                'class'       => 'Eeesbk\ImgResizer\Models\Settings',
                 'order'       => 0,
-                'permissions' => ['toughdeveloper.imageresizer.access_settings']
+                'permissions' => ['eeesbk.img_resizer.access_settings']
             ]
         ];
     }
