@@ -1,7 +1,7 @@
 {
     "name": "eeesbk/img_resizer",
     "type": "october-plugin",
-    "description": "October CMS Plugin to resize and compress images with TinyPNG.",
+    "description": "October CMS Plugin to resize and compress images with TinyPNG",
     "license": "MIT",
     "website": "https://octobercms.com/plugin/eeesbk-img_resizer",
     "require": {
