@@ -1,4 +1,4 @@
-# Image Resizer
+# Img Resizer
 
 - [Introduction](#introduction)
 - [Available filters](#filters)
