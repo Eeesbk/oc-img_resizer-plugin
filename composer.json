@@ -6,6 +6,6 @@
     "website": "https://octobercms.com/plugin/eeesbk-imgresizer",
     "require": {
         "composer/installers": "~1.0",
-        "tinify/tinify": "^1.3"
+        "tinify/tinify-php": "^1.6.1"
     }
 }
