@@ -2,11 +2,11 @@
 
 return [
     'plugin' => [
-        'name' => 'Image Resizer',
+        'name' => 'Img Resizer',
         'description' => 'Provides Twig filter to resize images on the fly.'
     ],
     'settings' => [
-        'label' => 'Image Resizer Settings',
+        'label' => 'Img Resizer Settings',
         'description' => 'Configure Image Resizer Settings',
         'tab_default' => 'Defaults',
         'tab_advanced' => 'Advanced',
@@ -40,7 +40,7 @@ return [
         'tinypng_days_until_reset' => 'Days until reset'
     ],
     'permission' => [
-        'tab' => 'Image Resizer',
+        'tab' => 'Img Resizer',
         'label' => 'Manage Settings'
     ]
 ];
