@@ -12,7 +12,7 @@ class Settings extends Model
 
     public $implement = ['System.Behaviors.SettingsModel'];
 
-    public $settingsCode = 'eeesbk_imgresize_settings';
+    public $settingsCode = 'eeesbk_imgresizer_settings';
 
     public $settingsFields = 'fields.yaml';
 
