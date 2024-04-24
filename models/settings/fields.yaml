@@ -72,7 +72,7 @@ tabs:
 
         tinypng_hint:
             type: hint
-            path: $/toughdeveloper/imageresizer/models/settings/_tinypng_hint.htm
+            path: $/eeesbk/imgresize/models/settings/_tinypng_hint.htm
             tab: toughdeveloper.imageresizer::lang.settings.tab_advanced
             trigger:
                 action: show
@@ -81,7 +81,7 @@ tabs:
 
         tinypng_stats:
             type: partial
-            path: $/toughdeveloper/imageresizer/models/settings/_tinypng_stats.htm
+            path: $/eeesbk/imgresize/models/settings/_tinypng_stats.htm
             tab: toughdeveloper.imageresizer::lang.settings.tab_advanced
             trigger:
                 action: show
