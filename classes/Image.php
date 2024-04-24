@@ -8,11 +8,6 @@ use Tinify\Source;
 class Image
 {
     /**
-     * Original path of image
-     */
-    protected $originalFilePath;
-
-    /**
      * File path of image
      */
     protected $filePath;
@@ -39,8 +34,6 @@ class Image
 
     public function __construct($filePath = false)
     {
-        $this->originalFilePath = $filePath;
-
         // Settings are needed often, so offset to variable
         $this->settings = Settings::instance();
 
@@ -49,11 +42,8 @@ class Image
 
         if ($filePath instanceof File) {
             $this->filePath = $filePath->getLocalPath();
-            $this->file->file_name = $filePath;
             return;
         }
-
-        $this->file->file_name = $filePath;
 
         $this->filePath = (file_exists($filePath))
             ? $filePath
@@ -78,19 +68,14 @@ class Image
         if (!is_file($this->filePath)) {
             return $this->notFoundImage($width, $height);
         }
-    
-        // Not a supported extension? Return the image
-        if (!$this->hasSupportedExtension()) {
-            return $this;
-        }
 
         // If extension is auto, set the actual extension
         if (strtolower($this->options['extension']) == 'auto') {
-           $this->options['extension'] = $this->file->getExtension();
+           $this->options['extension'] = pathinfo($this->filePath)['extension'];
         }
 
         // Set a disk name, this enables caching
-        $this->file->disk_name = $this->cacheKey();
+        $this->file->disk_name = $this->diskName();
 
         // Set the thumbfilename to save passing variables to many functions
         $this->thumbFilename = $this->getThumbFilename($width, $height);
@@ -124,13 +109,6 @@ class Image
      */
     public function getCachedImagePath($public = false)
     {
-        // Not a support file extension? Just return the original image
-        if (!$this->hasSupportedExtension()) {
-            return ($public === true)
-                ? url(str_replace(base_path() . '/', '', $this->filePath))
-                : $this->filePath;
-        }
-
         $filePath = $this->file->getStorageDirectory() . $this->getPartitionDirectory() . $this->thumbFilename;
 
         if ($public === true) {
@@ -160,9 +138,7 @@ class Image
         // Create array of commonly used folders
         // These will be used to try capture the actual file path to an image without the sub-directory path
         $folders = [
-            '/storage/app/uploads/public/'
-
-            //Need fixed for OctCMS v3
+             '/storage/app/uploads/public/'
             //config('cms.themesPath'),
             //config('cms.pluginsPath'),
             //config('cms.storage.uploads.path'),
@@ -213,9 +189,9 @@ class Image
      * Creates a unique disk name for an image
      * @return string
      */
-    protected function cacheKey()
+    protected function diskName()
     {
-        $diskName = $this->originalFilePath;
+        $diskName = $this->filePath;
 
         // Ensures a unique filepath when tinypng compression is enabled
         if ($this->isCompressionEnabled()) {
@@ -316,7 +292,7 @@ class Image
     */
     protected function getPartitionDirectory()
     {
-        return implode('/', array_slice(str_split($this->cacheKey(), 3), 0, 3)) . '/';
+        return implode('/', array_slice(str_split($this->diskName(), 3), 0, 3)) . '/';
     }
 
     /**
@@ -329,15 +305,6 @@ class Image
         $height = (integer) $height;
 
         return 'thumb__' . $width . '_' . $height . '_' . $this->options['offset'][0] . '_' . $this->options['offset'][1] . '_' . $this->options['mode'] . '.' . $this->options['extension'];
-    }
-
-    /**
-     * Checks if it is a resizable file extension
-     * @return boolean
-     */
-    protected function hasSupportedExtension()
-    {
-        return in_array($this->file->getExtension(), File::$imageExtensions);
     }
 
     /**
