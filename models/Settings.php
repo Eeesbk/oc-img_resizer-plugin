@@ -1,4 +1,4 @@
-<?php namespace ToughDeveloper\ImageResizer\Models;
+<?php namespace Eeesbk\ImgResizer\Models;
 
 use Model;
 use Lang;
@@ -12,7 +12,7 @@ class Settings extends Model
 
     public $implement = ['System.Behaviors.SettingsModel'];
 
-    public $settingsCode = 'toughdeveloper_imageresizer_settings';
+    public $settingsCode = 'eeesbk_imgresize_settings';
 
     public $settingsFields = 'fields.yaml';
 
@@ -32,7 +32,7 @@ class Settings extends Model
     public $customMessages = [];
 
     public function __construct(){
-        $this->customMessages['valid_tinypng_key'] = Lang::get('toughdeveloper.imageresizer::lang.settings.tinypng_invalid_key');
+        $this->customMessages['valid_tinypng_key'] = Lang::get('eeesbk.imgresizer::lang.settings.tinypng_invalid_key');
 
         parent::__construct();
     }
