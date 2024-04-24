@@ -5,48 +5,48 @@
 tabs: 
     fields:
         not_found_image:
-            label: eeesbk/imgresize::lang.settings.not_found_image_label
-            comment: eeesbk/imgresize::lang.settings.not_found_image_comment
-            tab: eeesbk/imgresize::lang.settings.tab_default
+            label: eeesbk/imgresizer::lang.settings.not_found_image_label
+            comment: eeesbk/imgresizer::lang.settings.not_found_image_comment
+            tab: eeesbk/imgresizer::lang.settings.tab_default
             type: mediafinder
             span: auto
 
         default_mode:
-            label: eeesbk/imgresize::lang.settings.default_mode_label
-            comment: eeesbk/imgresize::lang.settings.default_mode_comment
-            tab: eeesbk/imgresize::lang.settings.tab_default
+            label: eeesbk/imgresizer::lang.settings.default_mode_label
+            comment: eeesbk/imgresizer::lang.settings.default_mode_comment
+            tab: eeesbk/imgresizer::lang.settings.tab_default
             type: dropdown
             options:
-                'auto': eeesbk/imgresize::lang.settings.auto
-                'exact': eeesbk/imgresize::lang.settings.mode_exact
-                'portrait': eeesbk/imgresize::lang.settings.mode_portrait
-                'landscape': eeesbk/imgresize::lang.settings.mode_landscape
-                'crop': eeesbk/imgresize::lang.settings.mode_crop
+                'auto': eeesbk/imgresizer::lang.settings.auto
+                'exact': eeesbk/imgresizer::lang.settings.mode_exact
+                'portrait': eeesbk/imgresizer::lang.settings.mode_portrait
+                'landscape': eeesbk/imgresizer::lang.settings.mode_landscape
+                'crop': eeesbk/imgresizer::lang.settings.mode_crop
             span: auto
 
         default_offset_x:
-            label: eeesbk/imgresize::lang.settings.default_offset_x_label
-            comment: eeesbk/imgresize::lang.settings.default_offset_x_comment
-            tab: eeesbk/imgresize::lang.settings.tab_default
+            label: eeesbk/imgresizer::lang.settings.default_offset_x_label
+            comment: eeesbk/imgresizer::lang.settings.default_offset_x_comment
+            tab: eeesbk/imgresizer::lang.settings.tab_default
             default: 0
             type: number
             span: auto
 
         default_offset_y:
-            label: eeesbk/imgresize::lang.settings.default_offset_y_label
-            comment: eeesbk/imgresize::lang.settings.default_offset_y_comment
-            tab: eeesbk/imgresize::lang.settings.tab_default
+            label: eeesbk/imgresizer::lang.settings.default_offset_y_label
+            comment: eeesbk/imgresizer::lang.settings.default_offset_y_comment
+            tab: eeesbk/imgresizer::lang.settings.tab_default
             default: 0
             type: number
             span: auto
 
         default_extension:
-            label: eeesbk/imgresize::lang.settings.default_extension_label
-            comment: eeesbk/imgresize::lang.settings.default_extension_comment
-            tab: eeesbk/imgresize::lang.settings.tab_default
+            label: eeesbk/imgresizer::lang.settings.default_extension_label
+            comment: eeesbk/imgresizer::lang.settings.default_extension_comment
+            tab: eeesbk/imgresizer::lang.settings.tab_default
             type: dropdown
             options:
-                'auto': eeesbk/imgresize::lang.settings.auto
+                'auto': eeesbk/imgresizer::lang.settings.auto
                 'jpg': 'jpg'
                 'jpeg': 'jpeg'
                 'gif': 'gif'
@@ -55,25 +55,25 @@ tabs:
             span: auto
 
         default_quality:
-            label: eeesbk/imgresize::lang.settings.default_quality_label
-            comment: eeesbk/imgresize::lang.settings.default_quality_comment
-            tab: eeesbk/imgresize::lang.settings.tab_default
+            label: eeesbk/imgresizer::lang.settings.default_quality_label
+            comment: eeesbk/imgresizer::lang.settings.default_quality_comment
+            tab: eeesbk/imgresizer::lang.settings.tab_default
             type: number
             default: 95
             span: auto
 
         default_sharpen:
-            label: eeesbk/imgresize::lang.settings.default_sharpen_label
-            comment: eeesbk/imgresize::lang.settings.default_sharpen_comment
-            tab: eeesbk/imgresize::lang.settings.tab_default
+            label: eeesbk/imgresizer::lang.settings.default_sharpen_label
+            comment: eeesbk/imgresizer::lang.settings.default_sharpen_comment
+            tab: eeesbk/imgresizer::lang.settings.tab_default
             type: number
             default: 0
             span: auto
 
         tinypng_hint:
             type: hint
-            path: $/eeesbk/imgresize/models/settings/_tinypng_hint.htm
-            tab: eeesbk/imgresize::lang.settings.tab_advanced
+            path: $/eeesbk/imgresizer/models/settings/_tinypng_hint.htm
+            tab: eeesbk/imgresizer::lang.settings.tab_advanced
             trigger:
                 action: show
                 field: enable_tinypng
@@ -81,24 +81,24 @@ tabs:
 
         tinypng_stats:
             type: partial
-            path: $/eeesbk/imgresize/models/settings/_tinypng_stats.htm
-            tab: eeesbk/imgresize::lang.settings.tab_advanced
+            path: $/eeesbk/imgresizer/models/settings/_tinypng_stats.htm
+            tab: eeesbk/imgresizer::lang.settings.tab_advanced
             trigger:
                 action: show
                 field: enable_tinypng
                 condition: checked
 
         enable_tinypng:
-            label: eeesbk/imgresize::lang.settings.enable_tinypng_label
-            comment: eeesbk/imgresize::lang.settings.enable_tinypng_comment
-            tab: eeesbk/imgresize::lang.settings.tab_advanced
+            label: eeesbk/imgresizer::lang.settings.enable_tinypng_label
+            comment: eeesbk/imgresizer::lang.settings.enable_tinypng_comment
+            tab: eeesbk/imgresizer::lang.settings.tab_advanced
             type: switch
             span: auto
 
         tinypng_developer_key:
-            label: eeesbk/imgresize::lang.settings.tinypng_developer_key_label
-            comment: eeesbk/imgresize::lang.settings.tinypng_developer_key_comment
-            tab: eeesbk/imgresize::lang.settings.tab_advanced
+            label: eeesbk/imgresizer::lang.settings.tinypng_developer_key_label
+            comment: eeesbk/imgresizer::lang.settings.tinypng_developer_key_comment
+            tab: eeesbk/imgresizer::lang.settings.tab_advanced
             span: auto
             trigger:
                 action: show
