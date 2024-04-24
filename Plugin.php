@@ -33,7 +33,7 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'eeesbk.img_resizer.access_settings' => [
+            'eeesbk.imgresizer.access_settings' => [
                 'tab'   => 'eeesbk.imgresizer::lang.permission.tab',
                 'label' => 'eeesbk.imgresizer::lang.permission.label'
             ]
