@@ -1,7 +1,7 @@
 <?php namespace Eeesbk\ImgResizer;
 
 use System\Classes\PluginBase;
-use ToughDeveloper\ImageResizer\Classes\Image;
+use Eeesbk\ImgResizer\Classes\Image;
 use Validator;
 
 /**
@@ -17,8 +17,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'eeesbk.img_resizer::lang.plugin.name',
-            'description' => 'eeesbk.img_resizer::lang.plugin.description',
+            'name'        => 'eeesbk.imgresizer::lang.plugin.name',
+            'description' => 'eeesbk.imgresizer::lang.plugin.description',
             'author'      => 'Eeesbk',
             'icon'        => 'icon-picture-o',
             'homepage'    => 'https://github.com/eeesbk/oc-img_resizer-plugin'
@@ -34,8 +34,8 @@ class Plugin extends PluginBase
     {
         return [
             'eeesbk.img_resizer.access_settings' => [
-                'tab'   => 'eeesbk.img_resizer::lang.permission.tab',
-                'label' => 'eeesbk.img_resizer::lang.permission.label'
+                'tab'   => 'eeesbk.imgresizer::lang.permission.tab',
+                'label' => 'eeesbk.imgresizer::lang.permission.label'
             ]
         ];
     }
@@ -81,12 +81,12 @@ class Plugin extends PluginBase
     {
         return [
             'settings' => [
-                'label'       => 'eeesbk.img_resizer::lang.settings.label',
+                'label'       => 'eeesbk.imgresizer::lang.settings.label',
                 'icon'        => 'icon-picture-o',
-                'description' => 'eeesbk.img_resizer::lang.settings.description',
+                'description' => 'eeesbk.imgresizer::lang.settings.description',
                 'class'       => 'Eeesbk\ImgResizer\Models\Settings',
                 'order'       => 0,
-                'permissions' => ['eeesbk.img_resizer.access_settings']
+                'permissions' => ['eeesbk.imgresizer.access_settings']
             ]
         ];
     }
