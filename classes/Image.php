@@ -1,6 +1,6 @@
-<?php namespace ToughDeveloper\ImageResizer\Classes;
+<?php namespace Eeesbk\ImgResizer\Classes;
 
-use ToughDeveloper\ImageResizer\Models\Settings;
+use Eeesbk\ImgResizer\Models\Settings;
 use October\Rain\Database\Attach\File;
 use Tinify\Tinify;
 use Tinify\Source;
@@ -238,7 +238,7 @@ class Image
 
         // If we do not have an existing custom not found image, use the default from this plugin
         if (!isset($imagePath) || !file_exists($imagePath)) {
-            $imagePath = plugins_path('toughdeveloper/imageresizer/assets/default-not-found.jpg');
+            $imagePath = plugins_path('eeesbk/imgresizer/assets/default-not-found.jpg');
         }
 
         // Create a new Image object to resize
