@@ -61,7 +61,7 @@ compress | Whether the image should be compressed or not. Only takes effect when
 The image resizer can also be used easily in PHP, as follows:
 
 ```
-use ToughDeveloper\ImageResizer\Classes\Image;
+use Eeesbk\ImgResizer\Classes\Image;
 
 $image = new Image('/path/to/image.jpg');
 $image->resize(150, 200, [ 'mode' => 'crop' ]);
